@@ -1,4 +1,5 @@
 const config = require("./utils/config");
+const path = require("path");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -10,7 +11,7 @@ const blogsRouter = require("./controllers/blogs");
 const usersRouter = require("./controllers/users");
 const loginRouter = require("./controllers/login");
 
-app.use(express.static("build"));
+app.use(express.static(path.resolve(__dirname, "build")));
 
 if (process.env.NODE_ENV === "test") {
   const testingRouter = require("./controllers/testing");

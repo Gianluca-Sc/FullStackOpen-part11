@@ -5,6 +5,10 @@ import userEvent from "@testing-library/user-event";
 
 import Blog from "./Blog";
 
+/**
+ * @jest-environment jsdom
+ */
+
 describe("Blog", () => {
   const blog = {
     title: "Goto considered harmful",

@@ -5,6 +5,10 @@ import userEvent from "@testing-library/user-event";
 
 import NewBlog from "./NewBlog";
 
+/**
+ * @jest-environment jsdom
+ */
+
 describe("NewBlog", () => {
   test("if liked twice, ", async () => {
     const createHandler = jest.fn();

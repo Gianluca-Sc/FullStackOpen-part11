@@ -24,6 +24,7 @@ jobs:
         env:
           MONGO_URI: ${{secrets.MONGO_URI}}
           TEST_MONGO_URI: ${{secrets.TEST_MONGO_URI}}
+          SECRET: ${{secrets.SECRET}}
         with:
           command: npm run test:e2e --prefix frontend/
           start: npm run start:test

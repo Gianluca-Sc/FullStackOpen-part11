@@ -26,5 +26,5 @@ jobs:
           TEST_MONGO_URI: ${{secrets.TEST_MONGO_URI}}
         with:
           command: npm run test:e2e --prefix frontend/
-          start: npm run start-prod
+          start: npm run start:test
           wait-on: http://localhost:5000
